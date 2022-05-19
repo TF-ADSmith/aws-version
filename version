@@ -1,6 +1,8 @@
 #!/bin/sh
-IFS=:
-set -- "${CODEBUILD_BUILD_ID}"
+VAR="${CODEBUILD_BUILD_ID}"
+OLDIFS=$IFS
+IFS=":"
+set -- $VAR
 PROJECT=$1
 VERSION_DATE=`date +"%Y%m%d_Build%H%M"`
 PREFIX=""
@@ -15,3 +17,4 @@ case $PROJECT in
 esac
 
 export USE_VERSION="$PREFIX$VERSION_DATE"
+IFS=$OLDIFS
