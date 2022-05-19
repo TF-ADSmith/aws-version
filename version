@@ -4,7 +4,7 @@ OLDIFS=$IFS
 IFS=":"
 set -- $VAR
 PROJECT=$1
-VERSION_DATE=`date +"%Y%m%d_Build%H%M"`
+VERSION_DATE=":America/New_York" date +"%Y%m%d_Build%H%M"
 PREFIX=""
 case $PROJECT in
 	FISN_Staging)
