@@ -7,11 +7,11 @@ PROJECT=$1
 VERSION_DATE=":US/Eastern" date +%Y%m%d_Build%H%M
 PREFIX=""
 case $PROJECT in
-	FISN_Staging)
+	+(_Staging))
 		PREFIX="rc"
 		;;
 
-	FISN_Production)
+	+(_Production))
 		PREFIX="v"
 		;;
 esac
