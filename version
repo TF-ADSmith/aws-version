@@ -1,4 +1,5 @@
 #!/bin/sh
+IFS=:
 set -- "${CODEBUILD_BUILD_ID}"
 PROJECT=$1
 VERSION_DATE=`date +"%Y%m%d_Build%H%M"`
