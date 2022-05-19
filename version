@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 IFS=':' read -a array <<< "${CODEBUILD_BUILD_ID}"
 PROJECT=${array[0]}
 VERSION_DATE=`date +"%Y%m%d_Build%H%M"`
