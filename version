@@ -1,19 +1,19 @@
 #!/bin/sh
-VAR="${CODEBUILD_BUILD_ID}"
+VAR="FISN_Staging:123456"
 OLDIFS=$IFS
 IFS=":"
 set -- $VAR
 PROJECT=$1
-VERSION_DATE=":America/New_York" date +%Y%m%d_Build%H%M
+VERSION_DATE=$(TZ=":America/New_York" date +%Y%m%d_Build%H%M)
 PREFIX=""
-case $PROJECT in
-	+(_Staging))
-		PREFIX="rc"
-		;;
+case "$PROJECT" in
+        *_Staging)
+                PREFIX="rc"
+                ;;
 
-	+(_Production))
-		PREFIX="v"
-		;;
+        *_Production)
+                PREFIX="v"
+                ;;
 esac
 
 export USE_VERSION="$PREFIX$VERSION_DATE"
