@@ -1,6 +1,6 @@
-#!/bin/bash
-IFS=':' read -a array <<< "${CODEBUILD_BUILD_ID}"
-PROJECT=${array[0]}
+#!/bin/sh
+set -- "${CODEBUILD_BUILD_ID}"
+PROJECT=$1
 VERSION_DATE=`date +"%Y%m%d_Build%H%M"`
 PREFIX=""
 case $PROJECT in
