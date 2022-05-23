@@ -22,5 +22,11 @@ case "$PROJECT" in
                 ;;
 esac
 
+export TARGET="$TARGET"
+export ANGULAR_TARGET="$ANGULAR_TARGET"
 export USE_VERSION="$PREFIX$VERSION_DATE"
+
+echo "==> TARGET = $TARGET"
+echo "==> ANGULAR_TARGET = $ANGULAR_TARGET"
+echo "==> USE_VERSION = $USE_VERSION"
 IFS=$OLDIFS
