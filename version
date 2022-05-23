@@ -7,15 +7,18 @@ PROJECT=$1
 VERSION_DATE=$(TZ=":America/New_York" date +%Y%m%d_Build%H%M)
 PREFIX=""
 TARGET=""
+ANGULAR_TARGET=""
 case "$PROJECT" in
         *_Staging)
                 PREFIX="rc"
                 TARGET="staging"
+                ANGULAR_TARGET="stage"
                 ;;
 
         *_Production)
                 PREFIX="v"
                 TARGET="production"
+                ANGULAR_TARGET="prod"
                 ;;
 esac
 
