@@ -9,6 +9,12 @@ PREFIX=""
 TARGET=""
 ANGULAR_TARGET=""
 case "$PROJECT" in
+       *_ViewpointCloudPilot)
+              PREFIX="tc"
+              TARGET="vcp"
+              ANGULAR_TARGET="vcp"
+              ;;
+
         *_Staging)
                 PREFIX="rc"
                 TARGET="staging"
