@@ -11,8 +11,8 @@ ANGULAR_TARGET=""
 case "$PROJECT" in
        *_Angular17Test)
              PREFIX="ngn"
-             TARGET="staging"
-             ANGULAR_TARGET="stage"
+             TARGET="ngn"
+             ANGULAR_TARGET="ngn"
                 ;;
 
        *_ViewpointCloudPilot)
