@@ -9,12 +9,6 @@ PREFIX=""
 TARGET=""
 ANGULAR_TARGET=""
 case "$PROJECT" in
-       *_Timeclock)
-             PREFIX="mtc"
-             TARGET="timeclock"
-             ANGULAR_TARGET="timeclock"
-                ;;
-
         *_Staging)
                 PREFIX="rc"
                 TARGET="staging"
