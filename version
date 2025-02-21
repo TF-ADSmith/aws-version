@@ -9,17 +9,11 @@ PREFIX=""
 TARGET=""
 ANGULAR_TARGET=""
 case "$PROJECT" in
-       *_Angular17Test)
-             PREFIX="ngn"
-             TARGET="ngn"
-             ANGULAR_TARGET="ngn"
+       *_Timeclock)
+             PREFIX="mtc"
+             TARGET="timeclock"
+             ANGULAR_TARGET="timeclock"
                 ;;
-
-       *_ViewpointCloudPilot)
-              PREFIX="tc"
-              TARGET="vcp"
-              ANGULAR_TARGET="vcp"
-              ;;
 
         *_Staging)
                 PREFIX="rc"
